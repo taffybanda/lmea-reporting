@@ -1,250 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Love My EA LinkedIn campaign report: Executive Time Audit</title>
-<style>
-:root{--bg:#ffffff;--panel:#f3f8fc;--ink:#10233a;--muted:#51637a;--line:#d7e3ee;--brand:#0077b6;--brand-soft:#d6eaf5;--warn:#b45309;--warn-soft:#fdf1e3;--good:#15803d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1823;--panel:#152433;--ink:#e8eff6;--muted:#9fb2c6;--line:#24384c;--brand:#3aa0d8;--brand-soft:#17344b;--warn:#f0a35a;--warn-soft:#3a2716;--good:#4ade80}}
-:root[data-theme="dark"]{--bg:#0e1823;--panel:#152433;--ink:#e8eff6;--muted:#9fb2c6;--line:#24384c;--brand:#3aa0d8;--brand-soft:#17344b;--warn:#f0a35a;--warn-soft:#3a2716;--good:#4ade80}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;font-size:16px;line-height:1.6}
-main{max-width:980px;margin:0 auto;padding:48px 24px 72px}
-h1{font-size:clamp(28px,4.4vw,42px);line-height:1.15;margin:0 0 12px;letter-spacing:-0.01em}
-.h1-line{display:block}
-h2{font-size:24px;line-height:1.25;margin:0 0 8px}
-h3{font-size:18px;margin:0 0 6px}
-p{margin:0 0 14px;max-width:72ch}
-.meta{color:var(--muted);font-size:14px;margin-bottom:36px}
-section{margin-top:64px}
-.lede{font-size:18px;max-width:64ch}
-.funnel{margin:28px 0 8px;display:grid;gap:10px}
-.stage{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:16px;align-items:center}
-.stage .lbl{font-size:14px;color:var(--muted);line-height:1.3}
-.bar{height:46px;background:var(--brand);border-radius:0 6px 6px 0;display:flex;align-items:center;padding:0 14px;color:#fff;font-weight:bold;font-size:18px;min-width:64px;white-space:nowrap}
-.bar.thin{background:var(--brand-soft);color:var(--ink)}
-.bar.zero{background:var(--warn-soft);color:var(--warn);border:1px dashed var(--warn)}
-.drop{grid-column:2;font-size:13px;color:var(--warn);margin:-4px 0 2px}
-.note{font-size:13px;color:var(--muted)}
-.callout{border-left:4px solid var(--warn);background:var(--warn-soft);padding:16px 20px;margin:24px 0}
-.callout p:last-child{margin:0}
-.callout ul.findings{margin:0}
-.steps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;margin:24px 0 8px;border:1px solid var(--line)}
-.step{padding:14px 12px;border-right:1px solid var(--line);background:var(--bg)}
-.step:last-child{border-right:0}
-.step b{display:block;font-size:17px;margin-bottom:4px}
-.step span{font-size:14px;color:var(--muted);line-height:1.4;display:block}
-.step.leak{background:var(--warn-soft)}
-.step.leak b{color:var(--warn)}
-@media (max-width:680px){.steps{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:20px 0}
-.stat{background:var(--bg);padding:18px 20px}
-.stat b{display:block;font-size:28px;line-height:1.1}
-.stat span{font-size:14px;color:var(--muted)}
-.tablewrap{overflow-x:auto;margin:20px 0}
-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
-th,td{text-align:right;padding:10px 12px;border-bottom:1px solid var(--line)}
-th:first-child,td:first-child{text-align:left}
-th{font-size:13px;color:var(--muted);font-weight:normal}
-tr.hl td{background:var(--brand-soft);font-weight:bold}
-.pie-block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:28px;align-items:center;margin:20px 0 12px}
-.canvas-wrap{position:relative;height:300px}
-.legend{display:grid;gap:5px;font-size:13px;color:var(--muted)}
-.legend div{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:8px;align-items:center}
-.legend i{width:12px;height:12px;border-radius:2px;border:1px solid var(--line)}
-.legend em{font-style:normal;color:var(--ink);font-variant-numeric:tabular-nums}
-.toggle{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:6px}
-.toggle button{font:inherit;font-size:14px;padding:7px 16px;background:transparent;color:var(--ink);border:0;cursor:pointer}
-.toggle button[aria-pressed="true"]{background:var(--brand);color:#fff}
-.toggle button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-ul.findings{padding-left:20px;margin:8px 0 0;max-width:72ch}
-ul.findings li{margin-bottom:8px}
-.ai-group{margin-top:32px}
-ul.actions{list-style:none;padding:0;margin:10px 0 0;max-width:76ch;border-top:1px solid var(--line)}
-ul.actions li{padding:12px 0 12px 32px;border-bottom:1px solid var(--line);position:relative}
-ul.actions li::before{content:"";position:absolute;left:0;top:15px;width:16px;height:16px;border:2px solid var(--brand);border-radius:3px}
-ul.actions b{display:block}
-ul.actions span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
-footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-@media (max-width:680px){.pie-block{grid-template-columns:1fr}.stage{grid-template-columns:1fr;gap:4px}.drop{grid-column:1}main{padding:32px 18px 56px}}
-</style>
-</head>
-<body>
-<main>
-<h1><span class="h1-line">LinkedIn Campaign Performance</span><span class="h1-line">Executive Time Audit</span></h1>
-<div class="meta">Love My EA | LinkedIn Campaign Manager and Google Analytics 4 data | Prepared September 30, 2026</div>
 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Love My EA LinkedIn Campaign Report: Executive Time Audit</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-<section aria-label="Campaign funnel">
-<div class="funnel">
-  <div class="stage"><div class="lbl">LinkedIn impressions</div><div class="bar" style="width:100%">~960,900</div></div>
-  <div class="stage"><div class="lbl">LinkedIn clicks</div><div class="bar" style="width:40%">200</div></div>
-  <div class="stage"><span></span><div class="drop">0.021% of impressions clicked</div></div>
-  <div class="stage"><div class="lbl">Time Audit page views</div><div class="bar thin" style="width:14%">5</div></div>
-  <div class="stage"><div class="lbl">Time Audit active users</div><div class="bar thin" style="width:12%">4</div></div>
-  <div class="stage"><span></span><div class="drop">2% of LinkedIn clicks reached the page as tracked users</div></div>
-  <div class="stage"><div class="lbl">Key events (conversions)</div><div class="bar zero" style="width:0">0</div></div>
-</div>
-<p class="note">Impression total is derived from the share percentages LinkedIn reports in each breakdown.</p>
+  <body>
+    <main>
+      <h1>LinkedIn Campaign Performance<br />Executive Time Audit</h1>
+      <div>Love My EA | LinkedIn Campaign Manager & Google Analytics | Prepared September 30, 2026</div>
+      <section>
+        <div class="funnel">
+          <div class="stage">
+            <div class="lbl">LinkedIn impressions</div>
+            <div class="bar" style="width:100%">960,900</div>
+          </div>
+          <div class="stage">
+            <div class="lbl">LinkedIn clicks</div>
+            <div class="bar" style="width:40%">200</div>
+          </div>
+          <div class="stage"><span></span>
+            <div class="drop">0.021% of impressions clicked</div>
+          </div>
+          <div class="stage">
+            <div class="lbl">Time Audit page views</div>
+            <div class="bar thin" style="width:14%">5</div>
+          </div>
+          <div class="stage">
+            <div class="lbl">Time Audit active users</div>
+            <div class="bar thin" style="width:12%">4</div>
+          </div>
+          <div class="stage"><span></span>
+            <div class="drop">2% of LinkedIn clicks reached the page as tracked users</div>
+          </div>
+          <div class="stage">
+            <div class="lbl">Key events (conversions)</div>
+            <div class="bar zero" style="width:0">0</div>
+          </div>
+        </div>
+        <p class="note">Impression total is derived from the share percentages LinkedIn reports in each breakdown.</p>
+        <div class="callout">
+          <h3>Why 200 clicks became 4 visitors</h3>
+          <ul class="findings">
+            <li><strong>Not every click was a visit attempt.</strong> LinkedIn's standard "Clicks" metric counts every click on an ad, including clicks on the company name, logo, "see more" text, and social actions, so a large share of the 200 were never attempts to visit the page.</li>
+            <li><strong>Low intent from the audience.</strong> The clicks that did head to the page came from an audience that mostly scrolled past the ad (a 0.02% CTR), which signals curiosity at best, not buying intent.</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>What happened on the landing page</h2>
+        <div class="stats">
+          <div class="stat"><b>5</b><span>Page views</span></div>
+          <div class="stat"><b>4</b><span>Active users</span></div>
+          <div class="stat"><b>1.25</b><span>Views per active user</span></div>
+          <div class="stat"><b>18s</b><span>Avg engagement time per user</span></div>
+          <div class="stat"><b>0</b><span>Key events (audit completions)</span></div>
+        </div>
+        <ul class="findings">
+          <li>None of the 4 visitors completed the audit.</li>
+          <li>One visitor returned for a second view (1.25 views per user), a small sign of interest worth following up on through retargeting.</li>
+        </ul>
+        <h3>Where the form loses people</h3>
+        <p>Visitors are willing to start. They move through the first screen, then drop off in the middle of the form, mostly on screens 2 and 3, and nobody has yet reached the results.</p>
+        <div class="steps" role="list">
+          <div class="step" role="listitem"><b>Screen 1</b><span>Started</span></div>
+          <div class="step leak" role="listitem"><b>Screen 2</b><span>Heavy drop-off</span></div>
+          <div class="step leak" role="listitem"><b>Screen 3</b><span>Heavy drop-off</span></div>
+          <div class="step" role="listitem"><b>Screen 4</b><span>Rarely reached</span></div>
+          <div class="step" role="listitem"><b>Screen 5</b><span>Rarely reached</span></div>
+          <div class="step" role="listitem"><b>Screen 6</b><span>Rarely reached</span></div>
+          <div class="step" role="listitem"><b>Results</b><span>0 completions</span></div>
+        </div>
+        <p class="note">Drop-off points are based on form behavior observed by the Love My EA team.</p>
+      </section>
+      <section>
+        <h2>Ad clicks by Job Title</h2>
+        <p>The 12 top job titles by clicks. Remaining titles are grouped as "Other."</p>
+        <div class="toggle" role="group"><button data-chart="jt" data-m="c">Clicks</button><button data-chart="jt" data-m="i">Impressions</button></div>
+        <div class="pie-block">
+          <div class="canvas-wrap"><canvas id="jt" role="img">Manager 17 clicks, Project Manager 12, CEO 12, Operations Manager 10, Office Manager 9, Sales Manager 6, CFO 5, COO 5, Owner 4, Founder 4, President 4, District Manager 4, other 108.</canvas></div>
+          <div class="legend" id="jt-legend"></div>
+        </div>
+        <ul class="findings">
+          <li>CFOs and COOs clicked at 0.04%, double the rate of Managers, Project Managers, and CEOs at 0.02%.</li>
+          <li>Manager and Project Manager absorbed about 19% of impressions. Project Manager is a weak fit for an executive assistant buyer and is the clearest place to cut.</li>
+          <li>District Manager posted the best CTR at 0.08%, though on a small base of 4,888 impressions.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Ad clicks by Industry</h2>
+        <p>The 12 top industries by clicks. Remaining industries are grouped as "Other."</p>
+        <div class="toggle" role="group"><button data-chart="ind" data-m="c">Clicks</button><button data-chart="ind" data-m="i">Impressions</button></div>
+        <div class="pie-block">
+          <div class="canvas-wrap"><canvas id="ind" role="img">Technology 32 clicks, Business Consulting 20, IT Services 15, Hospitality 14, Media and Telecom 14, Medical Practices 13, Food and Beverage 10, Non-profit 10, Construction 9, Wholesale 9, Transportation and Logistics 9, Retail 8, other 37.</canvas></div>
+          <div class="legend" id="ind-legend"></div>
+        </div>
+        <ul class="findings">
+          <li>Business Consulting and Services took the largest share of impressions at 14.5% but returned 10% of clicks at a 0.01% CTR. Construction shows the same pattern.</li>
+          <li>Technology, Information and Internet delivered 16% of clicks from under 11% of impressions. With IT Services and Media and Telecommunications, the tech cluster produced just over 30% of all clicks.</li>
+          <li>Hospitality, Wholesale, and Transportation and Logistics all held a 0.03% CTR, above the campaign average.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Ad clicks by Location</h2>
+        <p>The 8 top metro areas by clicks. These metros account for only 22% of clicks and about 18% of impressions.</p>
+        <div class="toggle" role="group"><button data-chart="loc" data-m="c">Clicks</button><button data-chart="loc" data-m="i">Impressions</button></div>
+        <div class="pie-block">
+          <div class="canvas-wrap"><canvas id="loc" role="img">New York City 15 clicks, Montreal 6, Chicago 5, Toronto 4, Denver 4, Charlotte 4, Philadelphia 3, Detroit 3, other 156.</canvas></div>
+          <div class="legend" id="loc-legend"></div>
+        </div>
+        <ul class="findings">
+          <li>Greater Toronto is the weakest metro, with 4.25% of impressions, 2% of clicks, and a 0.01% CTR.</li>
+          <li>Greater Montreal earned more clicks than Toronto from a third of the impressions. Charlotte (0.05%) and Denver (0.04%) are small but efficient.</li>
+          <li>More than 80% of impressions landed outside the top metros, a sign that geographic targeting is broad enough to spread the budget thin.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Action items for the next run</h2>
+        <p>Grouped by when they need to happen. Items in the first group should be completed before any new budget goes live.</p>
+        <h3 class="claude-suggestions">Before relaunch: fix the form</h3>
+        <ul class="actions">
+          <li><b>Fix the intro copy.</b> Correct "How much of the week goes on work that doesn't need?" to read "work that doesn't need you."<span>Done when the intro screen reads cleanly.</span></li>
+          <li><b>Time screens 2 and 3 against the one-minute promise.</b> Complete the audit on a phone with a stopwatch and note how long each screen takes. Any screen that runs well past 10 seconds needs trimming.<span>Done when all six screens fit comfortably inside a minute on mobile.</span></li>
+          <li><b>Make the time estimates effortless.</b> Wherever screens 2 and 3 ask executives to estimate hours, use preset ranges or tap-to-select options instead of typed numbers or fine-grained sliders, and cut any question that does not change the final result.<span>Done when every answer on those screens takes a single tap.</span></li>
+          <li><b>Show a running tally mid-form.</b> After screen 2 or 3, give a preview of the result, such as "So far, about X hours a week could come off your plate." This rewards the effort at the exact point people leave and delivers on the "your hours, counted" promise early.<span>Done when visitors see a first number before screen 4.</span></li>
+          <li><b>Check where contact details are requested.</b> If name and email only appear on the final screen, move a light email capture earlier, framed as "Where should we send your results?", so anyone who drops later can be sent a link to finish.<span>Done when partial completions can be followed up.</span></li>
+          <li><b>Build a condensed variant.</b> Create a version with screens 2 and 3 merged and trimmed, ready to split test against the current six-screen form.<span>Done when both versions are live-ready with per-screen completion tracking.</span></li>
+        </ul>
+        <h3 class="claude-suggestions">Before relaunch: reset the campaign setup</h3>
+        <ul class="actions">
+          <li><b>Change the optimization goal.</b> Set the campaign to optimize for landing page clicks or website visits instead of general engagement.<span>Done when the campaign objective matches the audit page goal.</span></li>
+          <li><b>Set up a Lead Gen Form test.</b> Build a native LinkedIn version of the shortened audit to run alongside the landing page.<span>Done when both paths are ready to compare on completions.</span></li>
+          <li><b>Create the retargeting audience.</b> Build a matched audience from Time Audit page visitors so it starts filling from day one.<span>Done when the audience is live in Campaign Manager.</span></li>
+        </ul>
+        <h3 class="claude-suggestions">Before relaunch: tighten targeting</h3>
+        <ul class="actions">
+          <li><b>Cut weak job titles.</b> Exclude Project Manager and reduce broad Manager and Sales Manager reach.<span>Done when these titles no longer take a leading share of impressions.</span></li>
+          <li><b>Prioritize senior decision makers.</b> Focus on CFO, COO, Owner, Founder, President, and Operations Manager.<span>Done when the title list reflects the buyers who clicked at the highest rates.</span></li>
+          <li><b>Rebalance industries.</b> Exclude or down-bid Business Consulting and Construction, and prioritize the technology cluster, Hospitality, Wholesale, and Transportation and Logistics.<span>Done when industry exclusions and bid adjustments are applied.</span></li>
+          <li><b>Narrow geography.</b> Pause or rework Toronto, keep New York and Montreal, and shift test budget toward Charlotte and Denver.<span>Done when the location list is focused rather than broad.</span></li>
+        </ul>
+        <h3 class="claude-suggestions">Before relaunch: refresh the creative</h3>
+        <ul class="actions">
+          <li><b>Write outcome-led headlines.</b> Build new variations around hours reclaimed each week rather than the service itself.<span>Done when at least three new hooks are ready to test.</span></li>
+          <li><b>Preview the audit result in the ad.</b> Show a sample result in the same format the audit returns: hours a week, days a year, and the type of Executive Assistant recommended.<span>Done when at least one creative variant features the sample result.</span></li>
+          <li><b>Match the ad to the page.</b> Carry the page's own promises into the ad copy: "get back 30+ hours a week" and "six screens, about a minute, no card, no obligation."<span>Done when a visitor sees the same promise in the ad and on arrival.</span></li>
+        </ul>
+        <h3 class="claude-suggestions">During the run: test, monitor, and follow up</h3>
+        <ul class="actions">
+          <li><b>Run the form split test.</b> Send traffic evenly to the current and condensed form versions.<span>Watch completion rate at each screen, especially screen 2 to 3 and screen 3 to 4.</span></li>
+          <li><b>Compare landing page and Lead Gen Form paths.</b> Track completed audits from each route.<span>Watch cost per completed audit once spend data is available.</span></li>
+          <li><b>Launch retargeting to abandoners.</b> Serve the matched audience an ad built around unfinished progress, such as "Your hours are half counted. Finish your audit in under a minute."<span>Watch how many return visitors finish the form.</span></li>
+          <li><b>Check the click-to-visit gap weekly.</b> Compare LinkedIn landing page clicks with GA4 users on the audit page.<span>Watch for the gap narrowing after the setup changes.</span></li>
+          <li><b>Review audience breakdowns at the midpoint.</b> Re-pull job title, industry, and location data and cut any segment still underperforming.<span>Watch for new weak spots before the budget is spent.</span></li>
+        </ul>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script src="chart.js"></script>
+  </body>
 
-<div class="callout">
-<h3>Why 200 clicks became 4 visitors</h3>
-<ul class="findings">
-<li><strong>Not every click was a visit attempt.</strong> LinkedIn's standard "Clicks" metric counts every click on an ad, including clicks on the company name, logo, "see more" text, and social actions, so a large share of the 200 were never attempts to visit the page.</li>
-<li><strong>Low intent from the audience.</strong> The clicks that did head to the page came from an audience that mostly scrolled past the ad (a 0.02% CTR), which signals curiosity at best, not buying intent.</li>
-</ul>
-</div>
-</section>
-
-<section aria-labelledby="ga-h">
-<h2 id="ga-h">What happened on the landing page</h2>
-
-<div class="stats">
-  <div class="stat"><b>5</b><span>Page views</span></div>
-  <div class="stat"><b>4</b><span>Active users</span></div>
-  <div class="stat"><b>1.25</b><span>Views per active user</span></div>
-  <div class="stat"><b>18s</b><span>Avg engagement time per user</span></div>
-  <div class="stat"><b>16</b><span>Events</span></div>
-  <div class="stat"><b>0</b><span>Key events (audit completions)</span></div>
-</div>
-<ul class="findings">
-<li>None of the 4 visitors completed the audit.</li>
-<li>One visitor returned for a second view (1.25 views per user), a small sign of interest worth following up on through retargeting.</li>
-</ul>
-
-<h3 style="margin-top:36px">Where the form loses people</h3>
-<p>Visitors are willing to start. They move through the first screen, then drop off in the middle of the form, mostly on screens 2 and 3, and nobody has yet reached the results.</p>
-<div class="steps" role="list" aria-label="Executive Time Audit screens and drop-off">
-  <div class="step" role="listitem"><b>Screen 1</b><span>Started</span></div>
-  <div class="step leak" role="listitem"><b>Screen 2</b><span>Heavy drop-off</span></div>
-  <div class="step leak" role="listitem"><b>Screen 3</b><span>Heavy drop-off</span></div>
-  <div class="step" role="listitem"><b>Screen 4</b><span>Rarely reached</span></div>
-  <div class="step" role="listitem"><b>Screen 5</b><span>Rarely reached</span></div>
-  <div class="step" role="listitem"><b>Screen 6</b><span>Rarely reached</span></div>
-  <div class="step" role="listitem"><b>Results</b><span>0 completions</span></div>
-</div>
-<p class="note">Drop-off points are based on form behavior observed by the Love My EA team.</p>
-
-
-</section>
-
-<section aria-labelledby="jt-h">
-<h2 id="jt-h">Who clicked: job title</h2>
-<p>The 12 top job titles by clicks. Remaining titles are grouped as "Other."</p>
-<div class="toggle" role="group" aria-label="Job title metric"><button data-chart="jt" data-m="c" aria-pressed="true">Clicks</button><button data-chart="jt" data-m="i" aria-pressed="false">Impressions</button></div>
-<div class="pie-block"><div class="canvas-wrap"><canvas id="jt" role="img" aria-label="Pie chart of clicks and impressions by job title">Manager 17 clicks, Project Manager 12, CEO 12, Operations Manager 10, Office Manager 9, Sales Manager 6, CFO 5, COO 5, Owner 4, Founder 4, President 4, District Manager 4, other 108.</canvas></div><div class="legend" id="jt-legend"></div></div>
-<ul class="findings">
-<li>CFOs and COOs clicked at 0.04%, double the rate of Managers, Project Managers, and CEOs at 0.02%.</li>
-<li>Manager and Project Manager absorbed about 19% of impressions. Project Manager is a weak fit for an executive assistant buyer and is the clearest place to cut.</li>
-<li>District Manager posted the best CTR at 0.08%, though on a small base of 4,888 impressions.</li>
-</ul>
-</section>
-
-<section aria-labelledby="ind-h">
-<h2 id="ind-h">Who clicked: industry</h2>
-<p>The 12 top industries by clicks. Remaining industries are grouped as "Other."</p>
-<div class="toggle" role="group" aria-label="Industry metric"><button data-chart="ind" data-m="c" aria-pressed="true">Clicks</button><button data-chart="ind" data-m="i" aria-pressed="false">Impressions</button></div>
-<div class="pie-block"><div class="canvas-wrap"><canvas id="ind" role="img" aria-label="Pie chart of clicks and impressions by industry">Technology 32 clicks, Business Consulting 20, IT Services 15, Hospitality 14, Media and Telecom 14, Medical Practices 13, Food and Beverage 10, Non-profit 10, Construction 9, Wholesale 9, Transportation and Logistics 9, Retail 8, other 37.</canvas></div><div class="legend" id="ind-legend"></div></div>
-<ul class="findings">
-<li>Business Consulting and Services took the largest share of impressions at 14.5% but returned 10% of clicks at a 0.01% CTR. Construction shows the same pattern.</li>
-<li>Technology, Information and Internet delivered 16% of clicks from under 11% of impressions. With IT Services and Media and Telecommunications, the tech cluster produced just over 30% of all clicks.</li>
-<li>Hospitality, Wholesale, and Transportation and Logistics all held a 0.03% CTR, above the campaign average.</li>
-</ul>
-</section>
-
-<section aria-labelledby="loc-h">
-<h2 id="loc-h">Where they clicked: location</h2>
-<p>The 8 top metro areas by clicks. These metros account for only 22% of clicks and about 18% of impressions.</p>
-<div class="toggle" role="group" aria-label="Location metric"><button data-chart="loc" data-m="c" aria-pressed="true">Clicks</button><button data-chart="loc" data-m="i" aria-pressed="false">Impressions</button></div>
-<div class="pie-block"><div class="canvas-wrap"><canvas id="loc" role="img" aria-label="Pie chart of clicks and impressions by metro area">New York City 15 clicks, Montreal 6, Chicago 5, Toronto 4, Denver 4, Charlotte 4, Philadelphia 3, Detroit 3, other 156.</canvas></div><div class="legend" id="loc-legend"></div></div>
-<ul class="findings">
-<li>Greater Toronto is the weakest metro, with 4.25% of impressions, 2% of clicks, and a 0.01% CTR.</li>
-<li>Greater Montreal earned more clicks than Toronto from a third of the impressions. Charlotte (0.05%) and Denver (0.04%) are small but efficient.</li>
-<li>More than 80% of impressions landed outside the top metros, a sign that geographic targeting is broad enough to spread the budget thin.</li>
-</ul>
-</section>
-
-<section aria-labelledby="rec-h">
-<h2 id="rec-h">Action items for the next run</h2>
-<p>Grouped by when they need to happen. Items in the first group should be completed before any new budget goes live.</p>
-
-<h3 class="ai-group">Before relaunch: fix the form</h3>
-<ul class="actions">
-<li><b>Fix the intro copy.</b> Correct "How much of the week goes on work that doesn't need?" to read "work that doesn't need you."<span>Done when the intro screen reads cleanly.</span></li>
-<li><b>Time screens 2 and 3 against the one-minute promise.</b> Complete the audit on a phone with a stopwatch and note how long each screen takes. Any screen that runs well past 10 seconds needs trimming.<span>Done when all six screens fit comfortably inside a minute on mobile.</span></li>
-<li><b>Make the time estimates effortless.</b> Wherever screens 2 and 3 ask executives to estimate hours, use preset ranges or tap-to-select options instead of typed numbers or fine-grained sliders, and cut any question that does not change the final result.<span>Done when every answer on those screens takes a single tap.</span></li>
-<li><b>Show a running tally mid-form.</b> After screen 2 or 3, give a preview of the result, such as "So far, about X hours a week could come off your plate." This rewards the effort at the exact point people leave and delivers on the "your hours, counted" promise early.<span>Done when visitors see a first number before screen 4.</span></li>
-<li><b>Check where contact details are requested.</b> If name and email only appear on the final screen, move a light email capture earlier, framed as "Where should we send your results?", so anyone who drops later can be sent a link to finish.<span>Done when partial completions can be followed up.</span></li>
-<li><b>Build a condensed variant.</b> Create a version with screens 2 and 3 merged and trimmed, ready to split test against the current six-screen form.<span>Done when both versions are live-ready with per-screen completion tracking.</span></li>
-</ul>
-
-<h3 class="ai-group">Before relaunch: reset the campaign setup</h3>
-<ul class="actions">
-<li><b>Change the optimization goal.</b> Set the campaign to optimize for landing page clicks or website visits instead of general engagement.<span>Done when the campaign objective matches the audit page goal.</span></li>
-<li><b>Set up a Lead Gen Form test.</b> Build a native LinkedIn version of the shortened audit to run alongside the landing page.<span>Done when both paths are ready to compare on completions.</span></li>
-<li><b>Create the retargeting audience.</b> Build a matched audience from Time Audit page visitors so it starts filling from day one.<span>Done when the audience is live in Campaign Manager.</span></li>
-</ul>
-
-<h3 class="ai-group">Before relaunch: tighten targeting</h3>
-<ul class="actions">
-<li><b>Cut weak job titles.</b> Exclude Project Manager and reduce broad Manager and Sales Manager reach.<span>Done when these titles no longer take a leading share of impressions.</span></li>
-<li><b>Prioritize senior decision makers.</b> Focus on CFO, COO, Owner, Founder, President, and Operations Manager.<span>Done when the title list reflects the buyers who clicked at the highest rates.</span></li>
-<li><b>Rebalance industries.</b> Exclude or down-bid Business Consulting and Construction, and prioritize the technology cluster, Hospitality, Wholesale, and Transportation and Logistics.<span>Done when industry exclusions and bid adjustments are applied.</span></li>
-<li><b>Narrow geography.</b> Pause or rework Toronto, keep New York and Montreal, and shift test budget toward Charlotte and Denver.<span>Done when the location list is focused rather than broad.</span></li>
-</ul>
-
-<h3 class="ai-group">Before relaunch: refresh the creative</h3>
-<ul class="actions">
-<li><b>Write outcome-led headlines.</b> Build new variations around hours reclaimed each week rather than the service itself.<span>Done when at least three new hooks are ready to test.</span></li>
-<li><b>Preview the audit result in the ad.</b> Show a sample result in the same format the audit returns: hours a week, days a year, and the type of Executive Assistant recommended.<span>Done when at least one creative variant features the sample result.</span></li>
-<li><b>Match the ad to the page.</b> Carry the page's own promises into the ad copy: "get back 30+ hours a week" and "six screens, about a minute, no card, no obligation."<span>Done when a visitor sees the same promise in the ad and on arrival.</span></li>
-</ul>
-
-<h3 class="ai-group">During the run: test, monitor, and follow up</h3>
-<ul class="actions">
-<li><b>Run the form split test.</b> Send traffic evenly to the current and condensed form versions.<span>Watch completion rate at each screen, especially screen 2 to 3 and screen 3 to 4.</span></li>
-<li><b>Compare landing page and Lead Gen Form paths.</b> Track completed audits from each route.<span>Watch cost per completed audit once spend data is available.</span></li>
-<li><b>Launch retargeting to abandoners.</b> Serve the matched audience an ad built around unfinished progress, such as "Your hours are half counted. Finish your audit in under a minute."<span>Watch how many return visitors finish the form.</span></li>
-<li><b>Check the click-to-visit gap weekly.</b> Compare LinkedIn landing page clicks with GA4 users on the audit page.<span>Watch for the gap narrowing after the setup changes.</span></li>
-<li><b>Review audience breakdowns at the midpoint.</b> Re-pull job title, industry, and location data and cut any segment still underperforming.<span>Watch for new weak spots before the budget is spent.</span></li>
-</ul>
-</section>
-
-<footer>
-<p>Sources: LinkedIn Campaign Manager demographic breakdowns (job title, industry, location) and Google Analytics 4 data for the Executive Time Audit landing page, supplied by the Love My EA team, plus form drop-off observations from the team. Form details are taken from the Executive Time Audit intro screen at lovemyea.com/time-audit. Campaign date range, spend, and landing page click data were not included and should be added for cost per visit and cost per lead analysis.</p>
-</footer>
-</main>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>
-(function(){
-var shades=['#042C53','#0C447C','#0077B6','#185FA5','#2a78d6','#378ADD','#5a9be3','#85B7EB','#9ec6ef','#B5D4F4','#cde2f7','#E6F1FB'];
-var other='#B4B2A9';
-function pal(n){return shades.slice(0,n).concat([other]);}
-var data={
- jt:{labels:['Manager','Project Manager','Chief Executive Officer','Operations Manager','Office Manager','Sales Manager','Chief Financial Officer','Chief Operating Officer','Owner','Founder','President','District Manager','Other job titles'],
-  c:[17,12,12,10,9,6,5,5,4,4,4,4,108],i:[112506,71859,70417,34153,50805,37410,14169,12451,16495,16458,14133,4888,505134]},
- ind:{labels:['Technology, Information and Internet','Business Consulting and Services','IT Services and IT Consulting','Hospitality','Media and Telecommunications','Medical Practices','Food and Beverage Services','Non-profit Organizations','Construction','Wholesale','Transportation, Logistics and Storage','Retail','Other industries'],
-  c:[32,20,15,14,14,13,10,10,9,9,9,8,37],i:[104736,139654,58970,51944,44945,57382,60589,46402,60207,34589,34183,41683,225616]},
- loc:{labels:['New York City Metro','Greater Montreal','Greater Chicago','Greater Toronto','Denver Metro','Charlotte Metro','Greater Philadelphia','Detroit Metro','Other locations'],
-  c:[15,6,5,4,4,4,3,3,156],i:[47561,13636,23578,40860,10365,7377,16152,10169,791202]}
-};
-var dark=document.documentElement.dataset.theme==='dark'||(document.documentElement.dataset.theme!=='light'&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);
-var gap=dark?'#0e1823':'#ffffff';
-var charts={};
-function legend(id,m){var d=data[id],v=d[m],t=v.reduce(function(a,b){return a+b},0),cols=pal(d.labels.length-1);
- document.getElementById(id+'-legend').innerHTML=d.labels.map(function(l,k){return '<div><i style="background:'+cols[k]+'"></i><span>'+l+'</span><em>'+v[k].toLocaleString()+' ('+(v[k]/t*100).toFixed(1)+'%)</em></div>';}).join('');}
-if(!window.Chart){Object.keys(data).forEach(function(id){legend(id,'c');});return;}
-Object.keys(data).forEach(function(id){var d=data[id];
- charts[id]=new Chart(document.getElementById(id),{type:'pie',data:{labels:d.labels,datasets:[{data:d.c.slice(),backgroundColor:pal(d.labels.length-1),borderColor:gap,borderWidth:2}]},
- options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){var t=c.dataset.data.reduce(function(a,b){return a+b},0);return ' '+c.label+': '+c.parsed.toLocaleString()+' ('+(c.parsed/t*100).toFixed(1)+'%)';}}}}}});
- legend(id,'c');});
-document.querySelectorAll('.toggle button').forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.chart,m=b.dataset.m;
- charts[id].data.datasets[0].data=data[id][m].slice();charts[id].update();legend(id,m);
- b.parentNode.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});});});
-})();
-</script>
-</body>
 </html>
